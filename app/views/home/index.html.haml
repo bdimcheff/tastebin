@@ -1,3 +1,15 @@
-%h3 Home
-- @users.each do |user|
-  %p User: #{link_to user.name, user}
+.hero-unit
+  %h1 Cook. Eat. Share.
+  %p Easily share your favorite recipes on tastebin!
+  %p
+    %a.btn.primary.large{href: '#'} Create a New Recipe &rarr;
+.row.conversion-graphic
+  .markdown
+    %h2 Turns this:
+    %pre.prettyprint= render partial: 'markdown_sample_recipe'
+  .arrow
+    %h1 &rarr;
+  .recipe
+    %h2 Into this:
+    .rendered
+      = render partial: 'rendered_sample_recipe'

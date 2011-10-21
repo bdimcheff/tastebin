@@ -6,12 +6,15 @@ group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
+  gem "compass", "~> 0.12.alpha.0"
+  gem 'compass_twitter_bootstrap'
 end
 gem 'jquery-rails'
 if HOST_OS =~ /linux/i
   gem 'therubyracer', '>= 0.8.2'
 end
 gem "haml", ">= 3.1.2"
+gem "tabs_on_rails"
 gem "haml-rails", ">= 0.3.4", :group => :development
 gem "rspec-rails", ">= 2.6.1", :group => [:development, :test]
 gem "database_cleaner", ">= 0.6.7", :group => :test

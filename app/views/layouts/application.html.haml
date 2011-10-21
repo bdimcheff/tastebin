@@ -6,8 +6,12 @@
     = javascript_include_tag :application
     = csrf_meta_tags
   %body
-    %ul.hmenu
-      = render 'shared/navigation'
-    - flash.each do |name, msg|
-      = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
-    = yield
+    .topbar
+      .fill
+        .container
+          %a.brand{href: '#'} tasteb.in
+          = tabs_tag open_tabs: { class: 'nav' } do |tab|
+            = tab.new_recipe 'New', '#'
+            = tab.latest_recipes 'Latest', '#'
+    .container
+      = yield
