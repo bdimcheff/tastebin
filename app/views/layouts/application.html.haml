@@ -9,9 +9,9 @@
     .topbar
       .fill
         .container
-          %a.brand{href: '#'} tasteb.in
+          %a.brand{href: root_path} tasteb.in
           = tabs_tag open_tabs: { class: 'nav' } do |tab|
-            = tab.new_recipe 'New', '#'
-            = tab.latest_recipes 'Latest', '#'
+            = tab.new_recipe 'New', new_recipe_path
+            = tab.latest_recipes 'Latest', recipes_path
     .container
       = yield

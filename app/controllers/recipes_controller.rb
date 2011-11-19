@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   respond_to :html, :json
 
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.recent_first.limit(10)
   end
 
   def new

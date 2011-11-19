@@ -1,6 +1,17 @@
-%h1.recipe-name= @recipe.name
-= @recipe.safe_body_html
-
-= link_to 'Edit', edit_recipe_path(@recipe)
-\|
-= link_to 'Back', recipes_path
+.recipe-full
+  %h1.recipe-name= @recipe.name
+  .row
+    .span12.body
+      = @recipe.safe_body_html
+    .span4
+      .meta.well
+        .author
+          by bdimcheff
+        .creation-date
+          = time_ago_in_words @recipe.created_at
+          ago
+      .tags.well
+        %ul
+          - %w{foo bar baz}.each do |tag|
+            %li
+              %span.label= tag

@@ -4,7 +4,10 @@
       .photo
         %img{:src => 'http://placehold.it/220x220'}
       .description
-        .author by bdimcheff
         .name= link_to recipe.name, recipe
+        .meta
+          by bdimcheff
+          = time_ago_in_words recipe.created_at
+          ago
         = recipe.description
 

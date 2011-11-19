@@ -7,6 +7,8 @@ class Recipe
 
   referenced_in :user
 
+  scope :recent_first, order_by(:updated_at.desc)
+
   def body_html
     markdown.render(body)
   end

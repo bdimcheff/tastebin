@@ -11,8 +11,13 @@ div.recipe-help
   @include gridColumn()
   @include columns(4)
 
-h1.recipe-name
-  @extend .page-header
+div.recipe-full
+  h1.recipe-name
+    @extend .page-header
+
+  .tags
+    & > ul
+      @include horizontal-list
 
 ul.recipe-list
   margin: 0
@@ -37,6 +42,6 @@ ul.recipe-list
         @extend .page-header
         @extend h2
 
-      div.author
+      div.meta
         float: right
-        line-height: 36px
+        font-size: smaller
