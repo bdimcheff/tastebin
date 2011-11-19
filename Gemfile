@@ -7,7 +7,7 @@ group :assets do
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
   gem "compass", "~> 0.12.alpha.0"
-  gem 'compass_twitter_bootstrap'
+  gem 'compass_twitter_bootstrap', :git => 'git://github.com/vwall/compass-twitter-bootstrap.git'
 end
 gem 'jquery-rails'
 if HOST_OS =~ /linux/i

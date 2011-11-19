@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/vwall/compass-twitter-bootstrap.git
+  revision: da3ef7748e7bbe53c400b5b89449627180eb2e38
+  specs:
+    compass_twitter_bootstrap (0.1.7)
+      compass
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -47,8 +54,6 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
-    compass_twitter_bootstrap (0.1.7)
-      compass
     database_cleaner (0.7.0)
     devise (1.5.0)
       bcrypt-ruby (~> 3.0)
@@ -183,7 +188,7 @@ DEPENDENCIES
   bson_ext (>= 1.4.0)
   coffee-rails (~> 3.1.0)
   compass (~> 0.12.alpha.0)
-  compass_twitter_bootstrap
+  compass_twitter_bootstrap!
   database_cleaner (>= 0.6.7)
   devise (>= 1.4.7)
   growl
