@@ -1,9 +1,9 @@
 .row
   .recipe-form-box
     = form_for @recipe, :html => { class: 'recipe-form' } do |f|
-      %label{for: 'title'} Title
+      %label{for: 'name'} Name
       .field
-        = f.text_field :title
+        = f.text_field :name
       %label{for: 'body'} Body
       .field
         = f.text_area :body
