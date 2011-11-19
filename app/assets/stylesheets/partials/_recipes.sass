@@ -10,3 +10,33 @@ form.recipe-form
 div.recipe-help
   @include gridColumn()
   @include columns(4)
+
+h1.recipe-name
+  @extend .page-header
+
+ul.recipe-list
+  margin: 0
+
+  li.recipe
+    @include no-bullet
+    @extend .row
+    margin-left: -20px
+    margin-bottom: 20px
+
+    div.photo
+      @include gridColumn()
+      @include columns(4)
+
+    div.description
+      @include gridColumn()
+      @include columns(12)
+      height: 220px
+      overflow: hidden
+
+      div.name
+        @extend .page-header
+        @extend h2
+
+      div.author
+        float: right
+        line-height: 36px

@@ -1,17 +1,10 @@
-%h1 Listing recipes
-
-%table
-  %tr
-    %th
-    %th
-    %th
-
+%ul.recipe-list
   - @recipes.each do |recipe|
-    %tr
-      %td= link_to 'Show', recipe
-      %td= link_to 'Edit', edit_recipe_path(recipe)
-      %td= link_to 'Destroy', recipe, :confirm => 'Are you sure?', :method => :delete
+    %li.recipe
+      .photo
+        %img{:src => 'http://placehold.it/220x220'}
+      .description
+        .author by bdimcheff
+        .name= link_to recipe.name, recipe
+        = recipe.description
 
-%br
-
-= link_to 'New Recipe', new_recipe_path

@@ -15,6 +15,10 @@ class Recipe
     Loofah.scrub_fragment(body_html, :escape).to_s.html_safe
   end
 
+  def description
+    safe_body_html
+  end
+
   def markdown
     @__markdown ||= Redcarpet::Markdown.new(
       Redcarpet::Render::HTML,
