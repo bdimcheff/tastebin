@@ -1,4 +1,6 @@
 Tastebin::Application.routes.draw do
+  resources :recipes
+
   #get \"users\/show\"
 
   root :to => "home#index"
