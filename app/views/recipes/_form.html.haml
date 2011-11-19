@@ -1,9 +1,14 @@
-= form_for @recipe, :html => { class: 'recipe-form' } do |f|
-  %label{for: 'title'} Title
-  .field
-    = f.text_field :title
-  %label{for: 'body'} Body
-  .field
-    = f.text_area :body
-  .actions
-    = f.submit 'Save'
+.row
+  .recipe-form-box
+    = form_for @recipe, :html => { class: 'recipe-form' } do |f|
+      %label{for: 'title'} Title
+      .field
+        = f.text_field :title
+      %label{for: 'body'} Body
+      .field
+        = f.text_area :body
+      .actions
+        = f.submit 'Save', class: 'save'
+        %button.cancel Cancel
+  .recipe-help
+    = preserve render :partial => 'shared/markdown_cheatsheet'

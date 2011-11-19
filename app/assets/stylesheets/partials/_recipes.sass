@@ -1,2 +1,12 @@
+div.recipe-form-box
+  @include gridColumn()
+  @include columns(12)
 form.recipe-form
-  background-color: #ff0
+  @extend .form-stacked
+
+  input[type='text'], textarea
+    width: 650px
+
+div.recipe-help
+  @include gridColumn()
+  @include columns(4)
