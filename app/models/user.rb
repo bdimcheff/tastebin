@@ -5,9 +5,9 @@ class User
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  field :name
-  validates_presence_of :name
-  validates_uniqueness_of :name, :email, :case_sensitive => false
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+  field :nickname
+  validates_presence_of :nickname
+  validates_uniqueness_of :nickname, :email, :case_sensitive => false
+  attr_accessible :nickname, :email, :password, :password_confirmation, :remember_me
 end
 

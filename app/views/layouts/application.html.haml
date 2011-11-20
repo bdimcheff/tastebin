@@ -13,5 +13,22 @@
           = tabs_tag open_tabs: { class: 'nav' } do |tab|
             = tab.new_recipe 'New', new_recipe_path
             = tab.latest_recipes 'Latest', recipes_path
+          %ul.nav.secondary-nav
+            - if current_user
+              %li
+                = link_to "Log Out", destroy_user_session_path, :method => :delete
+              %li
+                = link_to current_user.nickname, edit_user_registration_path
+            - else
+              %li
+                = link_to "Log In", new_user_session_path
     .container
+      - if flash[:alert]
+        .alert-message.error.fade.in{:'data-alert' => true}
+          %a.close{href: "#"} x
+          %p= flash[:alert]
+      - if flash[:notice]
+        .alert-message.warning.fade.in{:'data-alert' => true}
+          %a.close{href: "#"} x
+          %p= flash[:notice]
       = yield

@@ -42,3 +42,5 @@ gem "devise", ">= 1.4.7"
 gem "rails-footnotes", ">= 3.7", :group => :development
 gem "redcarpet", "2.0.0b5"
 gem "loofah"
+gem "twitter_bootstrap_form_for"
+gem "ruby-debug19", :group => [:development, :test]

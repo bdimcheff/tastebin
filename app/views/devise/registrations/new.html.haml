@@ -1,21 +1,10 @@
-%h2 Sign up
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  %p
-    = f.label :name
-    %br/
-    = f.text_field :name
-  %p
-    = f.label :email
-    %br/
-    = f.email_field :email
-  %p
-    = f.label :password
-    %br/
-    = f.password_field :password
-  %p
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation
-  %p= f.submit "Sign up"
-= render :partial => "devise/shared/links"
+.row
+  .sign-up
+    %h1 Sign Up
+    = twitter_bootstrap_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+      = f.email_field :email
+      = f.text_field :nickname
+      = f.password_field :password
+      = f.password_field :password_confirmation
+      = f.actions do
+        = f.submit 'Sign Up'
