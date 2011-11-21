@@ -5,6 +5,6 @@
       = f.text_area :body
       = f.actions do
         = f.submit 'Save'
-        %button.cancel Cancel
+        %button.cancel.browser-back{type: 'button'} Cancel
   .recipe-help
     = preserve render :partial => 'shared/markdown_cheatsheet'
