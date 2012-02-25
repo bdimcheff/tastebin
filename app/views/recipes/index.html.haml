@@ -6,7 +6,7 @@
       .description.span9
         .name= link_to recipe.name, recipe
         .meta
-          by bdimcheff
+          by #{recipe.user.nickname}
           = time_ago_in_words recipe.created_at
           ago
         = recipe.description

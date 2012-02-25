@@ -6,7 +6,7 @@
     .span3
       .meta.well
         .author
-          by bdimcheff
+          by #{@recipe.user.nickname}
         .creation-date
           = time_ago_in_words @recipe.created_at
           ago

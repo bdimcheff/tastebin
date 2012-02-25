@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  respond_to :html, :json
+  before_filter :require_login, :except => [:index,:show]
 
   def index
     @recipes = Recipe.recent_first.limit(10)
