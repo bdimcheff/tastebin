@@ -11,6 +11,7 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(params[:recipe])
+    @recipe.user = current_user
 
     flash[:notice] = "Recipe was successfully created" if @recipe.save
 
