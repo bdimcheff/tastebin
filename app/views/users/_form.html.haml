@@ -1,0 +1,10 @@
+= twitter_bootstrap_form_for @user, :url => @user.new? ? users_path : update_user_path do |f|
+  = f.text_field :email
+  = f.text_field :nickname
+  = f.password_field :password
+  = f.password_field :password_confirmation
+  = f.actions do
+    - if @user.new?
+      = f.submit 'Register'
+    - else
+      = f.submit 'Save'

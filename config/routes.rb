@@ -5,9 +5,13 @@ Tastebin::Application.routes.draw do
 
   root :to => "home#index"
 
-  devise_for :users
-  resources :users, :only => :show
-
+  resources :users, :only => [:new,:create]
+  get 'users/show' => 'users#show', :as => :show_user
+  get 'users/edit' => 'users#edit', :as => :edit_user
+  put 'users/update' => 'users#update', :as => :update_user
+  resources :sessions, :only => :create
+  get 'login' => 'sessions#new', :as => :login
+  get 'logout' => 'sessions#destroy', :as => :logout
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
