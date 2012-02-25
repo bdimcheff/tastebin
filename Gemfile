@@ -7,7 +7,7 @@ group :assets do
   gem 'coffee-rails', "~> 3.2.0"
   gem 'uglifier'
   gem "compass", "~> 0.12.alpha.0"
-  gem 'compass_twitter_bootstrap', :git => 'git://github.com/vwall/compass-twitter-bootstrap.git'
+  gem 'compass_twitter_bootstrap', "~> 2.0.0"
 end
 gem 'jquery-rails'
 if HOST_OS =~ /linux/i
@@ -42,5 +42,5 @@ gem "devise", ">= 1.4.7"
 gem "rails-footnotes", ">= 3.7", :group => :development
 gem "redcarpet", "2.0.0b5"
 gem "loofah"
-gem "twitter_bootstrap_form_for"
+gem "twitter_bootstrap_form_for", :git => "git://github.com/stouset/twitter_bootstrap_form_for.git", :ref => 'a1ed21787872a1469d0e57a632f5442e3106d334'
 gem "ruby-debug19", :group => [:development, :test]

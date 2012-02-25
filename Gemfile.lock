@@ -1,9 +1,11 @@
 GIT
-  remote: git://github.com/vwall/compass-twitter-bootstrap.git
-  revision: da3ef7748e7bbe53c400b5b89449627180eb2e38
+  remote: git://github.com/stouset/twitter_bootstrap_form_for.git
+  revision: a1ed21787872a1469d0e57a632f5442e3106d334
+  ref: a1ed21787872a1469d0e57a632f5442e3106d334
   specs:
-    compass_twitter_bootstrap (0.1.7)
-      compass
+    twitter_bootstrap_form_for (2.0.1.0.rc1)
+      actionpack (~> 3)
+      railties (~> 3)
 
 GEM
   remote: http://rubygems.org/
@@ -56,6 +58,8 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
+    compass_twitter_bootstrap (2.0.1.2)
+      compass
     database_cleaner (0.7.0)
     devise (1.5.0)
       bcrypt-ruby (~> 3.0)
@@ -186,9 +190,6 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    twitter_bootstrap_form_for (1.0.3)
-      actionpack (~> 3)
-      railties (~> 3)
     tzinfo (0.3.31)
     uglifier (1.1.0)
       execjs (>= 0.3.0)
@@ -203,7 +204,7 @@ DEPENDENCIES
   bson_ext (>= 1.4.0)
   coffee-rails (~> 3.2.0)
   compass (~> 0.12.alpha.0)
-  compass_twitter_bootstrap!
+  compass_twitter_bootstrap (~> 2.0.0)
   database_cleaner (>= 0.6.7)
   devise (>= 1.4.7)
   growl
@@ -226,5 +227,5 @@ DEPENDENCIES
   ruby-debug19
   sass-rails (~> 3.2.0)
   tabs_on_rails
-  twitter_bootstrap_form_for
+  twitter_bootstrap_form_for!
   uglifier
