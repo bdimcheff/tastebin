@@ -24,11 +24,11 @@
               %li= link_to "Log In", login_path
     .container
       - if flash[:alert]
-        .alert-message.error.fade.in{:'data-alert' => true}
-          %a.close{href: "#"} x
-          %p= flash[:alert]
+        .alert.alert-error
+          %a.close{href: "#", :'data-dismiss' => 'alert'} x
+          = flash[:alert]
       - if flash[:notice]
-        .alert-message.warning.fade.in{:'data-alert' => true}
-          %a.close{href: "#"} x
-          %p= flash[:notice]
+        .alert.alert-warning
+          %a.close{href: "#", :'data-dismiss' => 'alert'} x
+          = flash[:notice]
       = yield
