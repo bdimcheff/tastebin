@@ -1,10 +1,10 @@
 .row
-  .recipe-form-box
+  .recipe-form-box.span9
     = twitter_bootstrap_form_for @recipe, :html => { class: 'recipe-form' } do |f|
       = f.text_field :name
       = f.text_area :body
       = f.actions do
         = f.submit 'Save'
-        %button.cancel.browser-back{type: 'button'} Cancel
-  .recipe-help
+        %button.btn.btn-danger.browser-back{type: 'button'} Cancel
+  .recipe-help.span3
     = preserve render :partial => 'shared/markdown_cheatsheet'

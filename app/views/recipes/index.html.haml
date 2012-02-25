@@ -1,9 +1,9 @@
 %ul.recipe-list
   - @recipes.each do |recipe|
-    %li.recipe
-      .photo
+    %li.recipe.row
+      .photo.span3
         %img{:src => 'http://placehold.it/220x220'}
-      .description
+      .description.span9
         .name= link_to recipe.name, recipe
         .meta
           by bdimcheff

@@ -4,12 +4,12 @@
   %p
     %a.btn.primary.large{href: new_recipe_path} Create a New Recipe &rarr;
 .row.conversion-graphic
-  .markdown.span7
+  .markdown.span5
     %h2 Turns this:
     %pre.prettyprint= render partial: 'markdown_sample_recipe'
   .arrow.span2
     %h1 &rarr;
-  .recipe.span7
+  .recipe.span5
     %h2 Into this:
-    .rendered
+    .rendered.well
       = render partial: 'rendered_sample_recipe'

@@ -1,15 +1,14 @@
 div.recipe-form-box
-  @include gridColumn()
-  @include columns(12)
-form.recipe-form
-  @extend .form-stacked
 
+form.recipe-form
+  margin-top: 20px
+  padding-left: 20px
   input[type='text'], textarea
     width: 650px
+  div.form-actions
+    margin-left: -20px
 
 div.recipe-help
-  @include gridColumn()
-  @include columns(4)
 
 div.recipe-full
   h1.recipe-name
@@ -29,16 +28,13 @@ ul.recipe-list
     margin-bottom: 20px
 
     div.photo
-      @include gridColumn()
-      @include columns(4)
 
     div.description
-      @include gridColumn()
-      @include columns(12)
       height: 220px
       overflow: hidden
 
       div.name
+        margin-top: 0
         @extend .page-header
         @extend h2
 
