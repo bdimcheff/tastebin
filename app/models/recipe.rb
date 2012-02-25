@@ -5,6 +5,8 @@ class Recipe
   field :name
   field :body
 
+  attr_accessible :name, :body
+
   referenced_in :user
 
   scope :recent_first, order_by(:updated_at.desc)
