@@ -38,9 +38,9 @@ gem "guard-livereload", ">= 0.3.0", :group => :development
 gem "guard-rspec", ">= 0.4.3", :group => :development
 gem "bson_ext", ">= 1.4.0"
 gem "mongoid", ">= 2.3.0"
-gem "devise", ">= 1.4.7"
 gem "rails-footnotes", ">= 3.7", :group => :development
 gem "redcarpet", "2.0.0b5"
 gem "loofah"
 gem "twitter_bootstrap_form_for", :git => "git://github.com/stouset/twitter_bootstrap_form_for.git", :ref => 'a1ed21787872a1469d0e57a632f5442e3106d334'
 gem "ruby-debug19", :group => [:development, :test]
+gem "sorcery"
