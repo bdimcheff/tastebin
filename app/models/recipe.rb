@@ -7,7 +7,7 @@ class Recipe
 
   attr_accessible :name, :body
 
-  referenced_in :user
+  belongs_to :user
 
   scope :recent_first, order_by(:updated_at.desc)
 

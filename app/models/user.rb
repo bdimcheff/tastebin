@@ -9,7 +9,9 @@ class User
 
   field :nickname
   field :email
-  
+
+  has_many :recipes
+
   validates_presence_of :nickname
   validates_uniqueness_of :nickname, :email, :case_sensitive => false
   validates_presence_of :password, :on => :create
